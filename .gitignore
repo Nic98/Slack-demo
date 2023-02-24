@@ -24,3 +24,4 @@ yarn-error.log*
 
 .env*
 app.config.js
+.history
