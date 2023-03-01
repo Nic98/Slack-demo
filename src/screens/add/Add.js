@@ -23,10 +23,14 @@ function Add() {
     })
   }
 
+  /*
+  Function for creating group by cometChat API
+  */
   const cometChatCreateGroup = (data) => {
     const GUID = data.guid
     const groupName = data.channel
     const groupType = data.privacy
+    // if groupType is true, GROUP_TYPE is set to public
       ? CometChat.GROUP_TYPE.PUBLIC
       : CometChat.GROUP_TYPE.PRIVATE
     const password = ''
@@ -46,6 +50,9 @@ function Add() {
       })
   }
 
+  /*
+  This function is to generate a random GUID
+  */
   const generateGUID = (length = 20) => {
     var result = []
     var characters =
@@ -59,6 +66,9 @@ function Add() {
     return result.join('')
   }
 
+  /*
+  Reset the form for creating channel
+  */
   const resetForm = () => {
     setChannel('')
     setChannel('')

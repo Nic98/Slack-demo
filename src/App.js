@@ -24,8 +24,8 @@ function App() {
         <>
             <Header />
             <main className="app__body">
-            <Sidebar />
-            <Component {...props} />
+                <Sidebar />
+                <Component {...props} />
             </main>
         </>
         )
