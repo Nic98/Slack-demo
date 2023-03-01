@@ -15,7 +15,7 @@ function Add() {
       alert('Please fill the form completely')
       return null
     }
-
+    console.log(privacy)
     cometChatCreateGroup({
       channel,
       privacy,
@@ -29,14 +29,17 @@ function Add() {
   const cometChatCreateGroup = (data) => {
     const GUID = data.guid
     const groupName = data.channel
-    const groupType = data.privacy
-    // if groupType is true, GROUP_TYPE is set to public
-      ? CometChat.GROUP_TYPE.PUBLIC
-      : CometChat.GROUP_TYPE.PRIVATE
+    // false is private, true is public  
+    let groupType = data.privacy
+    if (groupType === "true") {
+        groupType = CometChat.GROUP_TYPE.PUBLIC
+    } else {
+        groupType = CometChat.GROUP_TYPE.PRIVATE
+    } 
     const password = ''
 
     const group = new CometChat.Group(GUID, groupName, groupType, password)
-
+   
     CometChat.createGroup(group)
       .then((group) => {
         console.log('Group created successfully:', group)
@@ -93,12 +96,12 @@ function Add() {
           <select
             name="privacy"
             value={privacy}
-            onChange={(e) => setPrivacy(e.target.value === true)}
+            onChange={(e) => setPrivacy(e.target.value)}
             required
           >
             <option value={''}>Select privacy</option>
-            <option value={false}>Public</option>
-            <option value={true}>Private</option>
+            <option value={true}>Public</option>
+            <option value={false}>Private</option>
           </select>
         </div>
 

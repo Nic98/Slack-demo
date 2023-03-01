@@ -399,6 +399,7 @@ function Channel() {
       ) : (
         ''
       )}
+
       <div className="channel__chat">
         <div className="channel__header">
           <div className="channel__headerLeft">
