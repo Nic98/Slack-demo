@@ -45,10 +45,12 @@ function Channel() {
 
   const findUser = (e) => {
     e.preventDefault()
-
     searchTerm(keyword)
   }
-
+    
+  /*
+  Search a user by the key word
+  */
   const searchTerm = (keyword) => {
     setSearching(true)
     const limit = 30
@@ -475,6 +477,7 @@ function Channel() {
             </span>
           </div>
           <hr />
+          
           <div className="channel__detailsMembers">
             <h4>Members({members.length})</h4>
             {members.map((member) => (
