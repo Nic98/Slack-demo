@@ -150,7 +150,7 @@ function User() {
 
   const remFriend = (uid, fid) => {
     if (window.confirm('Are you sure?')) {
-      const url = `https://api-us.cometchat.io/v2.0/users/${uid}/friends`
+      const url = `https://api-us.cometchat.io/v3.0/users/${uid}/friends`
       const options = {
         method: 'DELETE',
         headers: {
