@@ -38,7 +38,6 @@ function User() {
 
   const findUser = (e) => {
     e.preventDefault()
-
     searchTerm(keyword)
   }
 
@@ -172,11 +171,13 @@ function User() {
         .catch((err) => console.error('error:' + err))
     }
   }
-
+  /*
+  Method for add friend
+  */
   const addFriend = (uid) => {
     const user = JSON.parse(localStorage.getItem('user'))
 
-    const url = `https://api-us.cometchat.io/v2.0/users/${user.uid}/friends`
+    const url = `https://api-us.cometchat.io/v3.0/users/${user.uid}/friends`
     const options = {
       method: 'POST',
       headers: {
