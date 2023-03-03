@@ -124,6 +124,7 @@ function Sidebar() {
             key={dm.uid}
             sub="sidebarOption__sub sidebarOption__color"
             user
+            avatar={dm.avatar}
             online={dm.status === 'online' ? 'isOnline' : ''}
           />
         ))}
