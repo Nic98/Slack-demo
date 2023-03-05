@@ -2,7 +2,7 @@
 
 This repo is a fork of [slack-clone](https://github.com/Daltonic/slack-clone)
 
-The slack-demo project is to add more flashy features to make it more user-friendly
+## The slack-demo project is to add more flashy features to make it more user-friendly
 
 - Better User Interface
 - Rewrite friend list in channel (has display bug before rewrite)
@@ -18,9 +18,7 @@ The slack-demo project is to add more flashy features to make it more user-frien
 - Now, the users can mention others in the chat
 - Website deployment
 
-Read the full tutorial here: [**>> How to Build a Team Messenger Site With React (Slack Clone)**](https://www.cometchat.com/tutorials/#)
-
-This example shows most of updated features With React (Slack-demo):
+## This section shows most of updated features With React (Slack-demo):
 
 ## Technology
 
