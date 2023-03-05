@@ -36,7 +36,7 @@ This demo project uses:
 ## Todo list
 
 - [x] rewrite friend list in channel section
-- [ ] optimize chatbox UI
+- [ ] optimize chatbox UI group messages by date
 - [ ] enhence rich text editor
 - [ ] update message input box to support emoji，markdown and attachments
 - [ ] enable users to expand/collapse channel list and DM list
