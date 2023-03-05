@@ -35,8 +35,17 @@ This demo project uses:
 
 ## Todo list
 
-- [x] update message input box to support emoji，markdown and attachments
-- [x] enable users to expand/collapse channel list and DM list
+- [x] rewrite friend list in channel section
+- [ ] optimize chatbox UI
+- [ ] enhence rich text editor
+- [] update message input box to support emoji，markdown and attachments
+- [] enable users to expand/collapse channel list and DM list
+- [] enable user to upload their avatar
+- [] enable formatting tools 
+- [] enable user status icon
+- [] enable emojis and pictures among the text input
+- [] enable users tom mention others
+- [] website deployment
 - [] enable users to create a new chat from the clicking on sidebar button
 - [] refactor the code to use redux
 - [] refactor the code to use docker
