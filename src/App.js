@@ -31,6 +31,7 @@ function App() {
         )
     }
 
+    // Check if the user is authenticated
     const GuardedRoute = ({ component: Component, auth, ...rest }) => (
         <Route
         {...rest}
@@ -66,21 +67,21 @@ function App() {
         <div className="app">
             <Router>
                 <Switch>
-                <GuardedRoute
-                    path="/channels/:id"
-                    auth={isLoggedIn}
-                    component={Channel}
-                />
+                    <GuardedRoute
+                        path="/channels/:id"
+                        auth={isLoggedIn}
+                        component={Channel}
+                    />
 
-                <GuardedRoute path="/users/:id" auth={isLoggedIn} component={User} />
+                    <GuardedRoute path="/users/:id" auth={isLoggedIn} component={User} />
 
-                <GuardedRoute path="/add/channel" auth={isLoggedIn} component={Add} />
+                    <GuardedRoute path="/add/channel" auth={isLoggedIn} component={Add} />
 
-                <Route path="/login">
-                    <Login />
-                </Route>
+                    <Route path="/login">
+                        <Login />
+                    </Route>
 
-                <GuardedRoute path="/" auth={isLoggedIn} component={Home} />
+                    <GuardedRoute path="/" auth={isLoggedIn} component={Home} />
                 </Switch>
             </Router>
         </div>
