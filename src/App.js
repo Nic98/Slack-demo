@@ -33,18 +33,16 @@ function App() {
     }
 
     // Check if the user is authenticated
+    // if the user is logged in then add structure to the component
+    // if not, will be redirect to the login page 
     const GuardedRoute = ({ component: Component, auth, ...rest }) => (
         <Route
-        {...rest}
-        render={(props) =>
-            auth ? (
-            addStructure(Component, props)
-            ) : (
-            <Redirect
-                to={{ pathname: '/login', state: { from: props.location } }}
-            />
-            )
-        }
+            {...rest}
+            render={(props) =>
+                auth ?
+                (addStructure(Component, props)) :
+                (<Redirect to={{ pathname: '/login', state: { from: props.location } }} />)
+            }
         />
     )
 
@@ -68,11 +66,7 @@ function App() {
         <div className="app">
             <Router>
                 <Switch>
-                    <GuardedRoute
-                        path="/channels/:id"
-                        auth={isLoggedIn}
-                        component={Channel}
-                    />
+                    <GuardedRoute path="/channels/:id" auth={isLoggedIn} component={Channel}/>
 
                     <GuardedRoute path="/users/:id" auth={isLoggedIn} component={User} />
 
