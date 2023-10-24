@@ -19,6 +19,7 @@ function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [isLoaded, setIsLoaded] = useState(false)
 
+    // add header and siderbar
     const addStructure = (Component, props) => {
         return (
         <>
