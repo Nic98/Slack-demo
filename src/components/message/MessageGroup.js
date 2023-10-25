@@ -17,14 +17,14 @@ function MessageGroup(props) {
         </div>
         <>
             {props.messages.map((message) => (
-            <Message
-                uid={message?.sender.uid}
-                name={message.sender?.name}
-                avatar={message.sender?.avatar}
-                message={message?.text}
-                timestamp={message?.sentAt}
-                key={message?.id}
-            />
+                <Message
+                    uid={message?.sender.uid}
+                    name={message.sender?.name}
+                    avatar={message.sender?.avatar}
+                    message={message?.text}
+                    timestamp={message?.sentAt}
+                    key={message?.id}
+                />
             ))}
         </>
         </>

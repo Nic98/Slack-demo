@@ -3,7 +3,20 @@
   align-items: center;
   margin: 10px 0;
   padding: 5px 20px;
+  position: relative;
 }
+.message__container {
+    margin: 20px 0px;
+  }
+  
+  .message__container:hover {
+    background-color: #f3f3f3;
+  }
+
+.message__sent__time {
+    font-size: 11px;
+    color: grey;
+  }
 
 .message:hover {
   background-color: #f3f3f3;
@@ -24,12 +37,12 @@
   margin-right: 5px;
   color: black;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 650;
   text-transform: capitalize;
 }
 
 .message__text {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .message__data {

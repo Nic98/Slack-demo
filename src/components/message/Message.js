@@ -29,7 +29,7 @@ function Message({ uid, name, avatar, message, timestamp }) {
             <div className="message__details">
                 <Link to={`/users/${uid}`}>{name}</Link>
                 <small>
-                <Moment unix date={timestamp} format="YYYY-MM-D hh:mm A" />
+                <Moment className="message__sent__time" unix date={timestamp} format="hh:mm A" />
                 </small>
             </div>
             <p className="message__text">{message}</p>
