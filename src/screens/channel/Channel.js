@@ -95,6 +95,7 @@ function Channel() {
         })
     }
 
+    // private chat message listener
     const listenForMessage = (listenerID) => {
         CometChat.addMessageListener(
         listenerID,
@@ -106,7 +107,8 @@ function Channel() {
         })
         )
     }
-
+    
+    // group message listener
     const getMessages = (guid) => {
         const limit = 50
 
@@ -136,6 +138,7 @@ function Channel() {
         sendMessage(id, message)
     }
 
+    // send message in a group
     const sendMessage = (guid, message) => {
         const receiverID = guid
         const messageText = message
@@ -404,9 +407,9 @@ function Channel() {
             ''
         )}
         
-        {/* // if not calling */}
+        {/* if not calling */}
         <div className="channel__chat">
-            {/* // the header of the channel */}
+            {/* the header of the channel */}
             <div className="channel__header">
                 <div className="channel__headerLeft">
                     <h4 className="channel__channelName">
@@ -437,7 +440,7 @@ function Channel() {
             ))}
             </div>
             
-            {/* // message input container */}
+            {/* message input container */}
             <div className="channel__chatInput">
             <form>
                 <input
@@ -451,7 +454,8 @@ function Channel() {
             </form>
             </div>
         </div>
-
+        
+        {/* channel details section */}
         <div className={`channel__details ${!toggle ? 'hide__details' : ''}`}>
             <div className="channel__header">
             <div className="channel__headerLeft">
@@ -483,7 +487,8 @@ function Channel() {
                 </span>
             </div>
             <hr />
-            
+                    
+            {/* All memebers section */}
             <div className="channel__detailsMembers">
                 <h4>Members({members.length})</h4>
                 {members.map((member) => (
@@ -525,7 +530,8 @@ function Channel() {
             )}
             </div>
         </div>
-
+        
+        {/* Add member section */}
         <div className={`channel__details ${!toggleAdd ? 'hide__details' : ''}`}>
             <div className="channel__header">
             <div className="channel__headerLeft">

@@ -1,0 +1,24 @@
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: lightgrey;
+    position: relative;
+  }
+  
+  .divider_label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    border: 1px solid lightgrey;
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .divider__container {
+    height: 40px;
+  }
+  
