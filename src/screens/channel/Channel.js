@@ -159,7 +159,8 @@ function Channel() {
             console.log('Message sending failed with error:', error)
         )
     }
-
+    
+    // add new member into the group
     const addMember = (guid, uid) => {
         let GUID = guid
         let membersList = [
@@ -177,6 +178,7 @@ function Channel() {
         })
     }
 
+    // remove member from the group
     const remMember = (GUID, UID) => {
         if (channel.scope !== 'owner') return null
 
@@ -192,7 +194,8 @@ function Channel() {
         }
         )
     }
-
+    
+    // listening for call
     const listenForCall = (listnerID) => {
         CometChat.addCallListener(
         listnerID,
@@ -226,6 +229,7 @@ function Channel() {
         )
     }
 
+    // start a new call
     const startCall = (call) => {
         const sessionId = call.sessionId
         const callType = call.type
@@ -425,7 +429,7 @@ function Channel() {
                     <InfoOutlinedIcon onClick={togglerDetail} />
                 </div>
             </div>
-                
+            
             {/* // message container */}
             <div id="messages-container" className="channel__messages">
             {messages.map((message) => (
@@ -488,7 +492,7 @@ function Channel() {
             </div>
             <hr />
                     
-            {/* All memebers section */}
+            {/* All memebers section (in the details section)*/}
             <div className="channel__detailsMembers">
                 <h4>Members({members.length})</h4>
                 {members.map((member) => (
