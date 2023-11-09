@@ -33,7 +33,7 @@
     .channel__channelName {
     display: flex;
     align-items: center;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
     }
 
     .channel__channelName > .MuiSvgIcon-root {
