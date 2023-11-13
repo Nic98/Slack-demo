@@ -109,7 +109,7 @@ function Add() {
                 </div>
 
                 <Button onClick={addChannel}>
-                    // if loading is true then show a div which id is loading
+                    {/* if loading is true then show a div which id is loading */}
                     {!loading ? 'Create Channel' : <div id="loading"></div>}
                 </Button>
             </form>

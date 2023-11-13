@@ -33,7 +33,7 @@
 .user__userName {
   display: flex;
   align-items: center;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 
 .user__userName > .MuiSvgIcon-root {
