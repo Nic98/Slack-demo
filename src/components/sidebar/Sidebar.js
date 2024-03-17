@@ -77,7 +77,7 @@ function Sidebar() {
             <h3>
                 <FiberManualRecordIcon />
                 {/* {user?.displayName.split(' ')[0]} */}
-                {user?.displayName || user.uid}
+                {user?.displayName || user?.uid}
             </h3>
             </div>
             <CreateIcon />
