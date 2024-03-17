@@ -1,0 +1,12 @@
+1. app.config.js
+This file stores the web app's Firebase configurations.
+Those configurations are from the Firebase website.
+2. index.js
+- read configurations of cometChat from the app.config file
+- use the buildin API from the cometchat to create the app setting
+- then initialize the app by appID and appsetting, then render the react app
+3. app.js
+- import all the component files, also the routers switch route and redirect
+- GuardedRoute is to check if the user is authenticated
+- useEffect to make sure the user is authenticated
+- return the main compoenent by A router switches among GuardedRoute
