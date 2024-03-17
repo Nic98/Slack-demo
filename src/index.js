@@ -12,19 +12,19 @@ const appSetting = new CometChat.AppSettingsBuilder()
     .setRegion(region)
     .build()
 
-    CometChat.init(appID, appSetting)
-    .then(() => {
-        ReactDOM.render(
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>,
-        document.getElementById('root')
-        )
-        console.log('Initialization completed successfully')
-    })
-    .catch((error) => {
-        console.log('Initialization failed with error:', error)
-    })
+CometChat.init(appID, appSetting)
+.then(() => {
+    ReactDOM.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+    )
+    console.log('Initialization completed successfully')
+})
+.catch((error) => {
+    console.log('Initialization failed with error:', error)
+})
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

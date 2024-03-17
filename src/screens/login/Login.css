@@ -1,56 +1,87 @@
 .login {
-  height: 100vh;
-  background-color: #f8f8f8;
-  display: grid;
-  place-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    display: grid;
+    place-items: center;
 }
 
 .login__container {
-  padding: 100px;
-  text-align: center;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 100px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .login__container > img {
-  object-fit: contain;
-  height: 100px;
-  margin-bottom: 40px;
+    object-fit: contain;
+    height: 100px;
+    margin-bottom: 40px;
 }
 
-.login__container > button {
-  margin-top: 50px;
-  text-transform: inherit !important;
-  background-color: #0a8d48;
-  color: white;
-  border: 1px solid #0a8d48;
+.third_party_login > button.google {
+    margin-top: 20px;
+    text-transform: inherit !important;
+    background-color: #fff;
+    color: #4285f4;
+    border: 2px solid #4285f4;
 }
 
-.login__container > button:hover {
-  background-color: transparent;
-  color: #0a8d48;
+.third_party_login > button.google:hover {
+    text-decoration: none;
+}
+
+.third_party_login > button.apple {
+    margin-top: 10px;
+    text-transform: inherit !important;
+    background-color: #fff;
+    border: 2px solid #1d1c1d;
+}
+
+.third_party_login > button.apple:hover {
+    text-decoration: none;
+}
+.google > span > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.apple > span > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.third_party_login {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 #loading {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 3px solid rgb(255 255 255);
-  border-radius: 50%;
-  border-top-color: #0a8d48;
-  animation: spin 1s ease-in-out infinite;
-  -webkit-animation: spin 1s ease-in-out infinite;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgb(255 255 255);
+    border-radius: 50%;
+    border-top-color: #0a8d48;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
 }
 
 #loading:hover {
-  border: 3px solid #0a8d48;
-  border-top-color: rgb(255 255 255);
+    border: 3px solid #0a8d48;
+    border-top-color: rgb(255 255 255);
 }
 
 @keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+    to {
+    -webkit-transform: rotate(360deg);
+    }
 }
 @-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+    to {
+    -webkit-transform: rotate(360deg);
+    }
 }

@@ -45,11 +45,15 @@ function App() {
             }
         />
     )
+    
 
+    // check if the user is logged in (authenticated)
+    // if not, logged in the user 
     useEffect(() => {
         const data = localStorage.getItem('user')
         if (data) {
             setIsLoggedIn(true)
+            console.log('user is logged in', data)
         } else {
             auth.onAuthStateChanged((user) => {
                 if (user) {
@@ -61,22 +65,36 @@ function App() {
     }, [])
 
     if (!isLoaded) return null
-
+    
+    // main compoenent
     return (
         <div className="app">
             <Router>
                 <Switch>
-                    <GuardedRoute path="/channels/:id" auth={isLoggedIn} component={Channel}/>
+                    <GuardedRoute
+                        path="/channels/:id"
+                        auth={isLoggedIn}
+                        component={Channel} />
 
-                    <GuardedRoute path="/users/:id" auth={isLoggedIn} component={User} />
+                    <GuardedRoute
+                        path="/users/:id"
+                        auth={isLoggedIn}
+                        component={User} />
 
-                    <GuardedRoute path="/add/channel" auth={isLoggedIn} component={Add} />
+                    <GuardedRoute
+                        path="/add/channel"
+                        auth={isLoggedIn}
+                        component={Add} />
 
                     <Route path="/login">
                         <Login />
                     </Route>
 
-                    <GuardedRoute path="/" auth={isLoggedIn} component={Home} />
+                    <GuardedRoute
+                        path="/"
+                        auth={isLoggedIn}
+                        component={Home} />
+
                 </Switch>
             </Router>
         </div>

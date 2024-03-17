@@ -62,7 +62,7 @@ function Sidebar() {
     useEffect(() => {
         const data = localStorage.getItem('user')
         setUser(JSON.parse(data))
-
+        console.log('user', data)
         getChannels()
         getDirectMessages()
     }, [])
@@ -76,7 +76,8 @@ function Sidebar() {
             </h2>
             <h3>
                 <FiberManualRecordIcon />
-                {user?.displayName.split(' ')[0]}
+                {/* {user?.displayName.split(' ')[0]} */}
+                {user?.displayName || user.uid}
             </h3>
             </div>
             <CreateIcon />
